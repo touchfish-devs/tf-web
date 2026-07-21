@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>下载 - TouchFish</title>
+    <title>Download - TouchFish</title>
     <style>
-        /* ===== 基础样式 ===== */
+        /* ===== 样式与中文版完全相同 ===== */
         :root {
             --bg-primary: #0b0f19;
             --bg-secondary: #111827;
@@ -55,7 +55,6 @@
             background-attachment: fixed;
         }
 
-        /* ===== 导航栏 ===== */
         .navbar {
             position: sticky;
             top: 0;
@@ -69,7 +68,6 @@
             align-items: center;
             padding: 0 20px;
         }
-
         .navbar-inner {
             max-width: var(--max-width);
             width: 100%;
@@ -79,7 +77,6 @@
             justify-content: space-between;
             gap: 16px;
         }
-
         .nav-brand {
             display: flex;
             align-items: center;
@@ -92,7 +89,6 @@
         .nav-brand:hover {
             opacity: 0.85;
         }
-
         .nav-icon {
             width: 32px;
             height: 32px;
@@ -101,7 +97,6 @@
             object-fit: contain;
             filter: drop-shadow(0 0 8px rgba(77, 166, 255, 0.35));
         }
-
         .nav-title {
             font-weight: 700;
             font-size: 1.2rem;
@@ -109,14 +104,12 @@
             color: #fff;
             white-space: nowrap;
         }
-
         .nav-links {
             display: flex;
             align-items: center;
             gap: 6px;
             flex-shrink: 0;
         }
-
         .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
@@ -146,7 +139,6 @@
             transform: translateY(-1px);
         }
 
-        /* ===== 主内容 ===== */
         .main-content {
             flex: 1;
             width: 100%;
@@ -157,7 +149,6 @@
             flex-direction: column;
             gap: 24px;
         }
-
         .page-header {
             padding: 40px 0 10px;
             border-bottom: 1px solid var(--border-color);
@@ -174,7 +165,6 @@
             font-size: 1rem;
         }
 
-        /* ===== 卡片 ===== */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -188,7 +178,6 @@
             background: var(--bg-card-hover);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
         }
-
         .card-title {
             font-size: 1.25rem;
             font-weight: 700;
@@ -198,7 +187,6 @@
         .card-title .highlight {
             color: var(--accent-light);
         }
-
         .card-meta {
             display: flex;
             flex-wrap: wrap;
@@ -207,18 +195,11 @@
             font-size: 0.9rem;
             margin: 6px 0 12px;
         }
-        .card-meta span {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
         .card-desc {
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 16px;
         }
-
         .card-actions {
             display: flex;
             gap: 10px;
@@ -301,11 +282,8 @@
             font-size: 0.85rem;
             margin: 4px 0 8px;
         }
-        .download-item .btn {
-            margin-top: 6px;
-        }
 
-        /* ===== tfvm 安装区块 ===== */
+        /* tfvm sections */
         .tfvm-section {
             margin-top: 18px;
             padding: 16px 18px;
@@ -317,7 +295,6 @@
         .tfvm-section.visible {
             display: block;
         }
-
         .tfvm-tab-nav {
             display: flex;
             gap: 4px;
@@ -350,7 +327,6 @@
             color: #fff;
             box-shadow: 0 2px 8px rgba(77, 166, 255, 0.15);
         }
-
         .tfvm-tab-panel {
             display: none;
             animation: fadeSlideIn 0.25s ease;
@@ -358,18 +334,10 @@
         .tfvm-tab-panel.active {
             display: block;
         }
-
         @keyframes fadeSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(6px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
         .tfvm-title {
             font-weight: 600;
             color: var(--accent-light);
@@ -386,7 +354,6 @@
             stroke: currentColor;
             stroke-width: 2;
         }
-
         .tfvm-select-group {
             display: flex;
             flex-wrap: wrap;
@@ -414,7 +381,6 @@
         .tfvm-select-group select:focus {
             border-color: var(--accent);
         }
-
         .tfvm-command {
             background: var(--bg-primary);
             border: 1px solid var(--border-color);
@@ -456,7 +422,6 @@
             border-color: var(--accent);
         }
 
-        /* ===== 页脚 ===== */
         .footer {
             text-align: center;
             padding: 32px 20px;
@@ -481,109 +446,47 @@
             margin: 0 4px;
         }
 
-        /* ===== 响应式 ===== */
         @media (max-width: 768px) {
-            .navbar {
-                padding: 0 12px;
-                height: 52px;
-            }
-            .nav-icon {
-                width: 26px;
-                height: 26px;
-                border-radius: 6px;
-            }
-            .nav-title {
-                font-size: 1.05rem;
-            }
-            .nav-link {
-                padding: 6px 10px;
-                font-size: 0.85rem;
-            }
-            .nav-link-download {
-                padding: 6px 14px;
-                font-size: 0.85rem;
-                border-radius: 16px;
-            }
-            .page-header h1 {
-                font-size: 1.6rem;
-            }
-            .download-grid {
-                grid-template-columns: 1fr;
-            }
-            .card {
-                padding: 20px 16px;
-            }
-            .tfvm-select-group {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .tfvm-command {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .tfvm-command .btn-copy {
-                align-self: flex-start;
-            }
-            .tfvm-tab-nav {
-                width: 100%;
-                justify-content: center;
-            }
+            .navbar { padding: 0 12px; height: 52px; }
+            .nav-icon { width: 26px; height: 26px; border-radius: 6px; }
+            .nav-title { font-size: 1.05rem; }
+            .nav-link { padding: 6px 10px; font-size: 0.85rem; }
+            .nav-link-download { padding: 6px 14px; font-size: 0.85rem; border-radius: 16px; }
+            .page-header h1 { font-size: 1.6rem; }
+            .download-grid { grid-template-columns: 1fr; }
+            .card { padding: 20px 16px; }
+            .tfvm-select-group { flex-direction: column; align-items: stretch; }
+            .tfvm-command { flex-direction: column; align-items: stretch; }
+            .tfvm-command .btn-copy { align-self: flex-start; }
+            .tfvm-tab-nav { width: 100%; justify-content: center; }
         }
-
         @media (max-width: 420px) {
-            .nav-title {
-                font-size: 0.95rem;
-            }
-            .nav-link {
-                padding: 5px 7px;
-                font-size: 0.78rem;
-            }
-            .nav-link-download {
-                padding: 5px 10px;
-                font-size: 0.78rem;
-                border-radius: 14px;
-            }
-            .nav-brand {
-                gap: 6px;
-            }
-            .nav-icon {
-                width: 22px;
-                height: 22px;
-                border-radius: 5px;
-            }
-            .page-header {
-                padding: 24px 0 8px;
-            }
-            .page-header h1 {
-                font-size: 1.3rem;
-            }
-            .card {
-                padding: 16px 12px;
-            }
-            .card-title {
-                font-size: 1.05rem;
-            }
-            .btn {
-                padding: 8px 14px;
-                font-size: 0.8rem;
-                border-radius: 16px;
-            }
+            .nav-title { font-size: 0.95rem; }
+            .nav-link { padding: 5px 7px; font-size: 0.78rem; }
+            .nav-link-download { padding: 5px 10px; font-size: 0.78rem; border-radius: 14px; }
+            .nav-brand { gap: 6px; }
+            .nav-icon { width: 22px; height: 22px; border-radius: 5px; }
+            .page-header { padding: 24px 0 8px; }
+            .page-header h1 { font-size: 1.3rem; }
+            .card { padding: 16px 12px; }
+            .card-title { font-size: 1.05rem; }
+            .btn { padding: 8px 14px; font-size: 0.8rem; border-radius: 16px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== 导航栏 ===== -->
-    <nav class="navbar" aria-label="主导航">
+    <!-- ===== 导航栏 (英文版) ===== -->
+    <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-inner">
-            <a href="index.html" class="nav-brand" aria-label="TouchFish 首页">
-                <img class="nav-icon" src="https://touchfish.ilovescratch.us.ci/logo.png" alt="TouchFish 图标" width="32" height="32" />
+            <a href="index.html" class="nav-brand" aria-label="TouchFish Home">
+                <img class="nav-icon" src="https://touchfish.ilovescratch.us.ci/logo.png" alt="TouchFish logo" width="32" height="32" />
                 <span class="nav-title">TouchFish</span>
             </a>
             <div class="nav-links">
-                <a href="https://touchfish.ilovescratch.us.ci" class="nav-link">文档</a>
-                <a href="downloads.html" class="nav-link nav-link-download">下载</a>
-                <a href="en/downloads.html" class="nav-link">English</a>
+                <a href="https://touchfish.ilovescratch.us.ci" class="nav-link">Docs</a>
+                <a href="downloads.html" class="nav-link nav-link-download">Download</a>
+                <a href="../downloads.html" class="nav-link">中文</a>
             </div>
         </div>
     </nav>
@@ -592,38 +495,38 @@
     <main class="main-content">
 
         <div class="page-header">
-            <h1>下载 TouchFish 应用</h1>
-            <p>选择适合您平台的应用版本，开始使用 TouchFish 生态。</p>
+            <h1>Download TouchFish Apps</h1>
+            <p>Choose the version that suits your platform and start using the TouchFish ecosystem.</p>
         </div>
 
-        <!-- ===== 聊天客户端 ===== -->
+        <!-- ===== Chat Clients ===== -->
         <section>
-            <h2 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:12px;">聊天客户端</h2>
+            <h2 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:12px;">Chat Clients</h2>
 
             <!-- V5 -->
             <div class="card" style="margin-bottom:16px;" id="v5-card">
-                <div class="card-title"><span class="highlight">TouchFish V5</span> 客户端</div>
+                <div class="card-title"><span class="highlight">TouchFish V5</span> Client</div>
                 <div class="card-meta">
-                    <span>最新版本</span>
-                    <span>跨平台</span>
+                    <span>Latest</span>
+                    <span>Cross‑platform</span>
                 </div>
                 <p class="card-desc">
-                    新一代聊天客户端，支持 E2EE 加密、TF Forum 集成和更多新功能。
+                    Next‑generation chat client with E2EE encryption, TF Forum integration, and more.
                 </p>
                 <div class="download-grid" style="margin:12px 0 16px;">
                     <div class="download-item">
                         <div class="name">TouchFish Client</div>
-                        <div class="desc">跨平台发行版，基于 Flutter 构建（移动 / 桌面）</div>
-                        <a href="https://github.com/ILoveScratch2/TouchFish-Client/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">下载</a>
-                        <a href="https://tf.ilovescratch.us.ci" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">网页端</a>
+                        <div class="desc">Cross‑platform (Flutter) – mobile / desktop</div>
+                        <a href="https://github.com/ILoveScratch2/TouchFish-Client/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Download</a>
+                        <a href="https://tf.ilovescratch.us.ci" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Web App</a>
                     </div>
                     <div class="download-item">
                         <div class="name">TouchFish UI Remake 2</div>
-                        <div class="desc">桌面端专用发行版（Windows / macOS / Linux）</div>
-                        <span class="btn btn-outline btn-sm btn-disabled">尚未发布</span>
+                        <div class="desc">Desktop‑only (Windows / macOS / Linux)</div>
+                        <span class="btn btn-outline btn-sm btn-disabled">Not yet released</span>
                     </div>
                 </div>
-                <!-- tfvm 安装区块 (仅Linux桌面可见) -->
+                <!-- tfvm (Linux only) -->
                 <div class="tfvm-section" id="tfvm-v5">
                     <div class="tfvm-title">
                         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -631,61 +534,60 @@
                             <polyline points="8 6 2 12 8 18" />
                             <line x1="12" y1="2" x2="12" y2="22" />
                         </svg>
-                        使用 tfvm 安装（Linux 桌面）
+                        Install via tfvm (Linux desktop)
                     </div>
                     <div class="tfvm-select-group">
-                        <label for="v5-pkg">选择包：</label>
+                        <label for="v5-pkg">Package:</label>
                         <select id="v5-pkg">
                             <option value="touchfish-client-build">TouchFish Client (touchfish-client-build)</option>
                         </select>
                     </div>
                     <div class="tfvm-command">
                         <code id="v5-cmd">tfvm -S touchfish-client-build</code>
-                        <button class="btn-copy" data-target="v5-cmd">复制</button>
+                        <button class="btn-copy" data-target="v5-cmd">Copy</button>
                     </div>
                     <p style="color: var(--text-muted); font-size:0.85rem; margin-top:6px;">
-                        需要先 <a href="https://github.com/touchfish-devs/tfvm" target="_blank" rel="noopener noreferrer" style="color:var(--accent-light);">下载 tfvm</a>
+                        First <a href="https://github.com/touchfish-devs/tfvm" target="_blank" rel="noopener noreferrer" style="color:var(--accent-light);">download tfvm</a>
                     </p>
                 </div>
                 <div class="card-actions">
                     <a href="https://github.com/2044-space-elevator/TFV5_server" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-                        下载服务端
+                        Download Server
                     </a>
                 </div>
             </div>
 
-            <!-- V4 (含 tfvm 和 AUR 双选项卡) -->
+            <!-- V4 -->
             <div class="card" style="margin-bottom:16px;" id="v4-card">
-                <div class="card-title"><span class="highlight">TouchFish V4</span> 客户端</div>
+                <div class="card-title"><span class="highlight">TouchFish V4</span> Client</div>
                 <div class="card-meta">
-                    <span>经典版</span>
+                    <span>Classic</span>
                 </div>
                 <p class="card-desc">
-                    稳定可靠的经典聊天室客户端，支持一键部署。
+                    Stable and reliable classic chat room, one‑click deployment.
                 </p>
                 <div class="download-grid" style="margin:12px 0 16px;">
                     <div class="download-item">
                         <div class="name">TouchFish v4 LTS</div>
-                        <div class="desc">官方 LTS 版本（服务端 + 命令行客户端）</div>
-                        <a href="https://github.com/2044-space-elevator/TouchFish" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">下载</a>
+                        <div class="desc">Official LTS (server + CLI client)</div>
+                        <a href="https://github.com/2044-space-elevator/TouchFish" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Download</a>
                     </div>
                     <div class="download-item">
                         <div class="name">TouchFish Astra</div>
-                        <div class="desc">跨平台 GUI 客户端，基于 Flutter 构建</div>
-                        <a href="https://github.com/ILoveScratch2/TouchFish-Astra" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">下载</a>
+                        <div class="desc">Cross‑platform GUI (Flutter)</div>
+                        <a href="https://github.com/ILoveScratch2/TouchFish-Astra" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Download</a>
                     </div>
                 </div>
 
-                <!-- tfvm + AUR 双选项卡 (仅Linux桌面可见) -->
+                <!-- tfvm + AUR tabs (Linux only) -->
                 <div class="tfvm-section" id="tfvm-v4">
-                    <!-- Tab 导航 -->
                     <div class="tfvm-tab-nav">
                         <button class="tfvm-tab-btn active" data-tab="tfvm-v4-panel">tfvm</button>
                         <button class="tfvm-tab-btn" data-tab="aur-v4-panel">AUR (Arch)</button>
                     </div>
 
-                    <!-- tfvm 面板 -->
+                    <!-- tfvm panel -->
                     <div class="tfvm-tab-panel active" id="tfvm-v4-panel">
                         <div class="tfvm-title">
                             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -693,24 +595,24 @@
                                 <polyline points="8 6 2 12 8 18" />
                                 <line x1="12" y1="2" x2="12" y2="22" />
                             </svg>
-                            使用 tfvm 安装（Linux 桌面）
+                            Install via tfvm (Linux desktop)
                         </div>
                         <div class="tfvm-select-group">
-                            <label for="v4-pkg">选择包：</label>
+                            <label for="v4-pkg">Package:</label>
                             <select id="v4-pkg">
                                 <option value="touchfish">TouchFish v4 (touchfish)</option>
                             </select>
                         </div>
                         <div class="tfvm-command">
                             <code id="v4-cmd">tfvm -S touchfish</code>
-                            <button class="btn-copy" data-target="v4-cmd">复制</button>
+                            <button class="btn-copy" data-target="v4-cmd">Copy</button>
                         </div>
                         <p style="color: var(--text-muted); font-size:0.85rem; margin-top:6px;">
-                            需要先 <a href="https://github.com/touchfish-devs/tfvm" target="_blank" rel="noopener noreferrer" style="color:var(--accent-light);">下载 tfvm</a>
+                            First <a href="https://github.com/touchfish-devs/tfvm" target="_blank" rel="noopener noreferrer" style="color:var(--accent-light);">download tfvm</a>
                         </p>
                     </div>
 
-                    <!-- AUR 面板 -->
+                    <!-- AUR panel -->
                     <div class="tfvm-tab-panel" id="aur-v4-panel">
                         <div class="tfvm-title">
                             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -718,10 +620,10 @@
                                 <polyline points="8 6 2 12 8 18" />
                                 <line x1="12" y1="2" x2="12" y2="22" />
                             </svg>
-                            使用 AUR 安装（Arch Linux）
+                            Install from AUR (Arch Linux)
                         </div>
                         <div class="tfvm-select-group">
-                            <label for="aur-helper">选择 AUR 助手：</label>
+                            <label for="aur-helper">AUR helper:</label>
                             <select id="aur-helper">
                                 <option value="yay">yay</option>
                                 <option value="paru">paru</option>
@@ -729,10 +631,10 @@
                         </div>
                         <div class="tfvm-command">
                             <code id="aur-cmd">yay -S touchfish</code>
-                            <button class="btn-copy" data-target="aur-cmd">复制</button>
+                            <button class="btn-copy" data-target="aur-cmd">Copy</button>
                         </div>
                         <p style="color: var(--text-muted); font-size:0.85rem; margin-top:6px;">
-                            需要先安装 AUR 助手（如 yay 或 paru）
+                            Install an AUR helper first (e.g., yay or paru)
                         </p>
                     </div>
                 </div>
@@ -740,22 +642,22 @@
 
             <!-- V3 -->
             <div class="card" id="v3-card">
-                <div class="card-title"><span class="highlight">TouchFish V3</span> 客户端（旧版）</div>
+                <div class="card-title"><span class="highlight">TouchFish V3</span> Client (Legacy)</div>
                 <div class="card-meta">
-                    <span>老旧版本</span>
+                    <span>Old version</span>
                 </div>
                 <p class="card-desc">
-                    仅适用于仍停留在 V3 的发行版，不建议新用户使用。
+                    Only for distributions still on V3. New users are advised to migrate to V4.
                 </p>
                 <div class="card-actions">
-                    <a href="https://bopid.cn/chat" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">下载 V3</a>
+                    <a href="https://bopid.cn/chat" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Download V3</a>
                 </div>
             </div>
         </section>
 
-        <!-- ===== 工具 ===== -->
+        <!-- ===== Tools ===== -->
         <section>
-            <h2 style="font-size:1.3rem; font-weight:700; color:#fff; margin:24px 0 12px;">工具</h2>
+            <h2 style="font-size:1.3rem; font-weight:700; color:#fff; margin:24px 0 12px;">Tools</h2>
 
             <div class="card">
                 <div class="card-title"><span class="highlight">TouchFish FileMove</span></div>
@@ -763,42 +665,39 @@
                     <span>Windows</span>
                 </div>
                 <p class="card-desc">
-                    高效安全的文件移动工具，适用于 Windows 系统。
+                    Efficient and secure file moving tool for Windows.
                 </p>
                 <div class="card-actions">
                     <a href="https://github.com/ILoveScratch2/TouchFish.FileMove" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                        查看源码（GitHub）
+                        Source Code (GitHub)
                     </a>
-                    <a href="#" class="btn btn-outline btn-sm">下载安装包</a>
+                    <a href="#" class="btn btn-outline btn-sm">Download Installer</a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- ===== 页脚 ===== -->
     <footer class="footer">
-        <span>TouchFish 社区</span>
+        <span>TouchFish Community</span>
         <span class="footer-separator">|</span>
-        <span>使用</span>
+        <span>Deployed on</span>
         <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>
-        <span>部署</span>
     </footer>
 
     <!-- ===== JavaScript ===== -->
     <script>
         (function() {
-            // ----- 检测 Linux 桌面并控制 tfvm 区块显示 -----
+            // 检测 Linux 桌面并显示 tfvm 区块
             const ua = navigator.userAgent.toLowerCase();
             const isLinux = ua.includes('linux') && !ua.includes('android') && !ua.includes('chrome os');
             const isDesktop = !(/mobi|android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua));
-
             if (isLinux && isDesktop) {
-                document.querySelectorAll('.tfvm-section').forEach(el => {
-                    el.classList.add('visible');
-                });
+                document.querySelectorAll('.tfvm-section').forEach(el => el.classList.add('visible'));
             }
 
-            // ----- 下拉框更新命令 (tfvm) -----
+            // tfvm 下拉更新命令
             const selects = document.querySelectorAll('.tfvm-section select');
             selects.forEach(select => {
                 select.addEventListener('change', function() {
@@ -810,7 +709,7 @@
                 });
             });
 
-            // ----- AUR 下拉框更新命令 -----
+            // AUR 下拉更新
             const aurSelect = document.getElementById('aur-helper');
             if (aurSelect) {
                 aurSelect.addEventListener('change', function() {
@@ -821,7 +720,7 @@
                 });
             }
 
-            // ----- 复制按钮功能 -----
+            // 复制按钮
             document.querySelectorAll('.btn-copy').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const targetId = this.getAttribute('data-target');
@@ -830,10 +729,8 @@
                         const text = codeEl.textContent;
                         navigator.clipboard.writeText(text).then(() => {
                             const original = this.textContent;
-                            this.textContent = '已复制';
-                            setTimeout(() => {
-                                this.textContent = original;
-                            }, 2000);
+                            this.textContent = 'Copied!';
+                            setTimeout(() => { this.textContent = original; }, 2000);
                         }).catch(() => {
                             const range = document.createRange();
                             range.selectNode(codeEl);
@@ -842,55 +739,42 @@
                             document.execCommand('copy');
                             window.getSelection().removeAllRanges();
                             const original = this.textContent;
-                            this.textContent = '已复制';
-                            setTimeout(() => {
-                                this.textContent = original;
-                            }, 2000);
+                            this.textContent = 'Copied!';
+                            setTimeout(() => { this.textContent = original; }, 2000);
                         });
                     }
                 });
             });
 
-            // ----- tfvm 区块内的 Tab 切换 (tfvm / AUR) -----
+            // Tab 切换 (tfvm / AUR)
             const tabNavs = document.querySelectorAll('.tfvm-tab-nav');
             tabNavs.forEach(nav => {
                 const btns = nav.querySelectorAll('.tfvm-tab-btn');
                 const section = nav.closest('.tfvm-section');
-
                 btns.forEach(btn => {
                     btn.addEventListener('click', function() {
                         const targetId = this.getAttribute('data-tab');
                         btns.forEach(b => b.classList.remove('active'));
                         this.classList.add('active');
-
                         const panels = section.querySelectorAll('.tfvm-tab-panel');
                         panels.forEach(p => p.classList.remove('active'));
-
                         const targetPanel = document.getElementById(targetId);
-                        if (targetPanel) {
-                            targetPanel.classList.add('active');
-                        }
+                        if (targetPanel) targetPanel.classList.add('active');
 
                         if (targetId === 'aur-v4-panel') {
                             const aurCmd = document.getElementById('aur-cmd');
                             const helper = document.getElementById('aur-helper');
-                            if (aurCmd && helper) {
-                                aurCmd.textContent = helper.value + ' -S touchfish';
-                            }
+                            if (aurCmd && helper) aurCmd.textContent = helper.value + ' -S touchfish';
                         }
                         if (targetId === 'tfvm-v4-panel') {
                             const select = section.querySelector('#v4-pkg');
                             const cmdEl = section.querySelector('#v4-cmd');
-                            if (select && cmdEl) {
-                                cmdEl.textContent = 'tfvm -S ' + select.value;
-                            }
+                            if (select && cmdEl) cmdEl.textContent = 'tfvm -S ' + select.value;
                         }
                     });
                 });
             });
-
         })();
     </script>
-
 </body>
 </html>

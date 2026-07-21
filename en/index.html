@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TouchFish - 交流、协作和创造</title>
+    <title>TouchFish - Connect, Collaborate, Create</title>
     <style>
         :root {
             --bg-primary: #0b0f19;
@@ -654,214 +654,207 @@
 </head>
 <body>
 
-    <!-- ==================== 导航栏 ==================== -->
-    <nav class="navbar" aria-label="主导航">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-inner">
-            <a href="#" class="nav-brand" aria-label="TouchFish 首页">
-                <img class="nav-icon" src="https://touchfish.ilovescratch.us.ci/logo.png" alt="TouchFish 图标" width="32" height="32" />
+            <a href="index.html" class="nav-brand" aria-label="TouchFish Home">
+                <img class="nav-icon" src="https://touchfish.ilovescratch.us.ci/logo.png" alt="TouchFish logo" width="32" height="32" />
                 <span class="nav-title">TouchFish</span>
             </a>
             <div class="nav-links">
-                <a href="https://touchfish.ilovescratch.us.ci" class="nav-link">文档</a>
-                <a href="downloads.html" class="nav-link nav-link-download">下载</a>
-                <a href="en/index.html" class="nav-link">English</a>
+                <a href="https://touchfish.ilovescratch.us.ci" class="nav-link">Docs</a>
+                <a href="downloads.html" class="nav-link nav-link-download">Download</a>
+                <a href="../index.html" class="nav-link">中文</a>
             </div>
         </div>
     </nav>
 
-    <!-- ==================== 主内容区 ==================== -->
     <main class="main-content">
-
-        <!-- Hero 区域 -->
         <section class="hero">
             <h1 class="hero-title">
-                与 <span class="accent-word">TouchFish</span> 一同交流，协作和创造
+                Connect, collaborate, and create with <span class="accent-word">TouchFish</span>
             </h1>
             <p class="hero-subtitle">
-                开源、安全、跨平台的即时通讯与云端服务生态
+                Open-source, secure, cross-platform instant messaging and cloud service ecosystem.
             </p>
             <a href="downloads.html" class="btn btn-primary">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                下载 TouchFish 产品
+                Download TouchFish
             </a>
         </section>
 
-        <!-- ===== 卡片：TouchFish 聊天客户端（含 V5/V4/V3 Tab） ===== -->
+        <!-- Chat client card with tabs -->
         <section class="card" id="card-chat">
             <div class="card-header">
                 <h2 class="card-title">
-                    <span class="highlight">TouchFish</span> 聊天客户端
+                    <span class="highlight">TouchFish</span> Chat Client
                 </h2>
             </div>
-            <!-- Tab 导航 -->
-            <div class="tab-nav" role="tablist" aria-label="版本切换">
+            <div class="tab-nav" role="tablist" aria-label="Version switch">
                 <button class="tab-btn active" role="tab" aria-selected="true" data-tab="v5" id="tab-btn-v5">
                     V5 <span class="tab-badge badge-new">NEW</span>
                 </button>
                 <button class="tab-btn" role="tab" aria-selected="false" data-tab="v4" id="tab-btn-v4">
-                    V4 <span class="tab-badge badge-classic">经典</span>
+                    V4 <span class="tab-badge badge-classic">Classic</span>
                 </button>
                 <button class="tab-btn" role="tab" aria-selected="false" data-tab="v3" id="tab-btn-v3">
-                    V3 <span class="tab-badge badge-legacy">旧版</span>
+                    V3 <span class="tab-badge badge-legacy">Legacy</span>
                 </button>
             </div>
 
-            <!-- V5 面板 -->
+            <!-- V5 Panel -->
             <div class="tab-panel active" id="panel-v5" role="tabpanel" aria-labelledby="tab-btn-v5">
                 <p class="card-desc">
-                    新一代 TouchFish 客户端，享用 TF Forum，E2EE 端到端加密和更多新功能。
+                    Next-generation TouchFish client with TF Forum, E2EE encryption and more new features.
                 </p>
                 <div class="client-grid">
                     <div class="client-item">
                         <div class="name">TouchFish Client</div>
-                        <div class="desc">跨平台发行版，基于 Flutter 构建（移动 / 桌面）</div>
-                        <span class="badge">V5</span>
-                        <br />
-                        <a href="https://github.com/ILoveScratch2/TouchFish-Client/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">下载</a>
-                        <a href="https://tf.ilovescratch.us.ci" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="margin-top:6px;">网页端</a>
+                        <div class="desc">Cross-platform build based on Flutter (mobile / desktop)</div>
+                        <span class="badge">V5</span><br />
+                        <a href="https://github.com/ILoveScratch2/TouchFish-Client/releases" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">Download</a>
+                        <a href="https://tf.ilovescratch.us.ci" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="margin-top:6px;">Web App</a>
                     </div>
                     <div class="client-item">
                         <div class="name">TouchFish UI Remake 2</div>
-                        <div class="desc">桌面端专用发行版（Windows / macOS / Linux）</div>
-                        <span class="badge">V5</span>
-                        <br />
-                        <span class="btn btn-outline btn-sm btn-disabled" style="margin-top:6px;">尚未发布</span>
+                        <div class="desc">Desktop‑only build (Windows / macOS / Linux)</div>
+                        <span class="badge">V5</span><br />
+                        <span class="btn btn-outline btn-sm btn-disabled" style="margin-top:6px;">Not yet released</span>
                     </div>
                 </div>
                 <div class="card-actions">
                     <a href="https://github.com/2044-space-elevator/TFV5_server" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-                        下载服务端
+                        Download Server
                     </a>
                 </div>
             </div>
 
-            <!-- V4 面板 -->
+            <!-- V4 Panel -->
             <div class="tab-panel" id="panel-v4" role="tabpanel" aria-labelledby="tab-btn-v4">
                 <p class="card-desc">
-                    经典 TouchFish 聊天室，随时随地一键部署，稳定可靠。
+                    Classic TouchFish chat room, one‑click deployment, stable and reliable.
                 </p>
                 <div class="client-grid">
                     <div class="client-item">
                         <div class="name">TouchFish v4 LTS</div>
-                        <div class="desc">官方 LTS 版本（服务端 + 命令行客户端）</div>
-                        <a href="https://github.com/2044-space-elevator/TouchFish" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">下载</a>
+                        <div class="desc">Official LTS (server + CLI client)</div>
+                        <a href="https://github.com/2044-space-elevator/TouchFish" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">Download</a>
                     </div>
                     <div class="client-item">
                         <div class="name">TouchFish Astra</div>
-                        <div class="desc">跨平台 GUI 客户端，基于 Flutter 构建</div>
-                        <a href="https://github.com/ILoveScratch2/TouchFish-Astra" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">下载</a>
+                        <div class="desc">Cross‑platform GUI client built with Flutter</div>
+                        <a href="https://github.com/ILoveScratch2/TouchFish-Astra" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">Download</a>
                     </div>
                 </div>
             </div>
 
-            <!-- V3 面板 -->
+            <!-- V3 Panel -->
             <div class="tab-panel" id="panel-v3" role="tabpanel" aria-labelledby="tab-btn-v3">
                 <p class="card-desc">
-                    下载老版本的 TouchFish。
+                    Download the old version of TouchFish.
                 </p>
                 <div class="alert-warning">
-                    除了部分停留在 V3 的发行版，大多数发行版不再为 V3 提供支持，建议迁移到 V4。
+                    Most distributions no longer support V3; migration to V4 is recommended.
                 </div>
                 <div class="card-actions">
                     <a href="https://bopid.cn/chat" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        下载 V3
+                        Download V3
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- ===== 卡片：TouchFish Drive ===== -->
+        <!-- Drive -->
         <section class="card" id="card-drive">
             <div class="card-header">
                 <h2 class="card-title">
-                    <span class="highlight">TouchFish Drive</span>：大容量云存储
+                    <span class="highlight">TouchFish Drive</span>: Large‑capacity cloud storage
                 </h2>
             </div>
             <p class="card-desc">
-                使用 TF Drive 存储资料，备份数据，保存灵感。随时随地访问你的文件。
+                Store documents, back up data, save your inspiration. Access your files anytime, anywhere.
             </p>
             <div class="card-actions">
                 <a href="https://drive.ilovescratch.us.ci" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    前往
+                    Visit
                 </a>
             </div>
         </section>
 
-        <!-- ===== 卡片：TouchFish Cloud ===== -->
+        <!-- Cloud -->
         <section class="card" id="card-cloud">
             <div class="card-header">
                 <h2 class="card-title">
-                    <span class="highlight">TouchFish Cloud</span>：个人云服务
+                    <span class="highlight">TouchFish Cloud</span>: Personal cloud service
                 </h2>
             </div>
             <p class="card-desc">
-                易上手的个人云服务解决方案。一键部署静态网站，支持 PHP 函数，并使用 Cloudflare 带来的安全性保障。
+                Easy‑to‑use personal cloud solution. One‑click static site deployment, PHP support, and Cloudflare security.
             </p>
             <div class="card-actions">
                 <a href="https://icc.gt.tc" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    前往
+                    Visit
                 </a>
             </div>
         </section>
 
-        <!-- ===== 卡片：Online Judge（SCG3 + TFOJ） ===== -->
+        <!-- Online Judge -->
         <section class="card" id="card-oj">
             <div class="card-header">
                 <h2 class="card-title">
-                    <span class="highlight">Online Judge</span>：评测题目，参与比赛
+                    <span class="highlight">Online Judge</span>: Solve problems, join contests
                 </h2>
             </div>
             <p class="card-desc">
-                TouchFish 生态的 OJ 系统，支持在线评测与竞赛。
+                TouchFish OJ ecosystem supports online judging and competitions.
             </p>
             <div class="client-grid">
                 <div class="client-item">
                     <div class="name">TouchFish OJ</div>
-                    <div class="desc">参加 TouchFish OJ 月赛</div>
-                    <a href="https://oj.piaoztsdy.cn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">前往 OJ</a>
+                    <div class="desc">Participate in TouchFish OJ monthly contests</div>
+                    <a href="https://oj.piaoztsdy.cn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">Go to OJ</a>
                 </div>
                 <div class="client-item">
                     <div class="name">Sleeping Cup Generation 3</div>
-                    <div class="desc">参加 Sleeping Cup 系列赛、CTFPC 和其他 SCG3 举办的比赛</div>
-                    <a href="https://scg3.piaoztsdy.cn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">前往 SCG3</a>
+                    <div class="desc">Join Sleeping Cup series, CTFPC, and other SCG3 events</div>
+                    <a href="https://scg3.piaoztsdy.cn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top:6px;">Go to SCG3</a>
                 </div>
             </div>
         </section>
 
-        <!-- ===== 卡片：TouchFish FileMove ===== -->
+        <!-- FileMove -->
         <section class="card" id="card-filemove">
             <div class="card-header">
                 <h2 class="card-title">
-                    <span class="highlight">TouchFish FileMove</span>：文件移动工具
+                    <span class="highlight">TouchFish FileMove</span>: File moving tool
                 </h2>
             </div>
             <p class="card-desc">
-                适用于 Windows 的高效安全的文件移动工具。
+                Efficient and secure file moving tool for Windows.
             </p>
             <div class="card-actions">
                 <a href="https://github.com/ILoveScratch2/TouchFish.FileMove" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    查看源码
+                    Source Code
                 </a>
             </div>
         </section>
 
-        <!-- ===== 卡片：还有更多 ===== -->
+        <!-- More -->
         <section class="card" id="card-more">
             <div class="card-header">
-                <h2 class="card-title">🚀 还有更多！</h2>
+                <h2 class="card-title">🚀 And more!</h2>
             </div>
             <p class="card-desc">
-                探索更多 TouchFish 产品和服务，发现无限可能。
+                Explore more TouchFish products and services. Discover endless possibilities.
             </p>
             <div class="card-actions">
                 <a href="https://touchfish.ilovescratch.us.ci" class="btn btn-outline btn-sm">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                    文档
+                    Docs
                 </a>
                 <a href="https://github.com/touchfish-devs" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -869,69 +862,45 @@
                 </a>
             </div>
         </section>
-
     </main>
 
-    <!-- ==================== 页脚 ==================== -->
     <footer class="footer">
-        <span>TouchFish 社区</span>
+        <span>TouchFish Community</span>
         <span class="footer-separator">|</span>
-        <span>使用</span>
+        <span>Deployed on</span>
         <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>
-        <span>部署</span>
     </footer>
 
-    <!-- ==================== Tab 切换脚本 ==================== -->
+    <!-- Tab and other scripts (same as Chinese) -->
     <script>
+        // Same JavaScript as Chinese version, adapt if needed
         (function() {
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabPanels = document.querySelectorAll('.tab-panel');
-
             tabButtons.forEach(btn => {
                 btn.addEventListener('click', function() {
                     const targetTab = this.getAttribute('data-tab');
-
-                    // 移除所有激活状态
-                    tabButtons.forEach(b => {
-                        b.classList.remove('active');
-                        b.setAttribute('aria-selected', 'false');
-                    });
+                    tabButtons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
                     tabPanels.forEach(p => p.classList.remove('active'));
-
-                    // 激活当前
                     this.classList.add('active');
                     this.setAttribute('aria-selected', 'true');
                     const targetPanel = document.getElementById('panel-' + targetTab);
-                    if (targetPanel) {
-                        targetPanel.classList.add('active');
-                    }
+                    if (targetPanel) targetPanel.classList.add('active');
                 });
             });
-
-            // 键盘导航支持
             const tabNav = document.querySelector('.tab-nav');
             if (tabNav) {
                 tabNav.addEventListener('keydown', function(e) {
                     const tabs = Array.from(tabButtons);
                     const currentIndex = tabs.indexOf(document.activeElement);
                     if (currentIndex === -1) return;
-
                     let newIndex = currentIndex;
-                    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                        e.preventDefault();
-                        newIndex = (currentIndex + 1) % tabs.length;
-                    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                        e.preventDefault();
-                        newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-                    }
-                    if (newIndex !== currentIndex) {
-                        tabs[newIndex].focus();
-                        tabs[newIndex].click();
-                    }
+                    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); newIndex = (currentIndex + 1) % tabs.length; }
+                    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); newIndex = (currentIndex - 1 + tabs.length) % tabs.length; }
+                    if (newIndex !== currentIndex) { tabs[newIndex].focus(); tabs[newIndex].click(); }
                 });
             }
         })();
     </script>
-
 </body>
 </html>
