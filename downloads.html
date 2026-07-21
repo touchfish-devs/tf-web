@@ -212,14 +212,6 @@
             align-items: center;
             gap: 4px;
         }
-        .card-meta .tag {
-            background: rgba(77, 166, 255, 0.12);
-            color: var(--accent-light);
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
 
         .card-desc {
             color: var(--text-secondary);
@@ -309,16 +301,6 @@
             font-size: 0.85rem;
             margin: 4px 0 8px;
         }
-        .download-item .badge {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 2px 10px;
-            border-radius: 12px;
-            background: rgba(77, 166, 255, 0.15);
-            color: var(--accent-light);
-            margin-right: 4px;
-        }
         .download-item .btn {
             margin-top: 6px;
         }
@@ -330,7 +312,7 @@
             background: rgba(77, 166, 255, 0.04);
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
-            display: none; /* 默认隐藏，由JS控制显示 */
+            display: none;
         }
         .tfvm-section.visible {
             display: block;
@@ -615,20 +597,19 @@
     <main class="main-content">
 
         <div class="page-header">
-            <h1>📦 下载 TouchFish 应用</h1>
+            <h1>下载 TouchFish 应用</h1>
             <p>选择适合您平台的应用版本，开始使用 TouchFish 生态。</p>
         </div>
 
         <!-- ===== 聊天客户端 ===== -->
         <section>
-            <h2 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:12px;">💬 聊天客户端</h2>
+            <h2 style="font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:12px;">聊天客户端</h2>
 
             <!-- V5 -->
             <div class="card" style="margin-bottom:16px;" id="v5-card">
                 <div class="card-title"><span class="highlight">TouchFish V5</span> 客户端</div>
                 <div class="card-meta">
                     <span>最新版本</span>
-                    <span class="tag">V5</span>
                     <span>跨平台</span>
                 </div>
                 <p class="card-desc">
@@ -684,7 +665,6 @@
                 <div class="card-title"><span class="highlight">TouchFish V4</span> 客户端</div>
                 <div class="card-meta">
                     <span>经典版</span>
-                    <span class="tag">V4</span>
                 </div>
                 <p class="card-desc">
                     稳定可靠的经典聊天室客户端，支持一键部署。
@@ -768,7 +748,6 @@
                 <div class="card-title"><span class="highlight">TouchFish V3</span> 客户端（旧版）</div>
                 <div class="card-meta">
                     <span>老旧版本</span>
-                    <span class="tag">V3</span>
                 </div>
                 <p class="card-desc">
                     仅适用于仍停留在 V3 的发行版，不建议新用户使用。
@@ -776,19 +755,17 @@
                 <div class="card-actions">
                     <a href="https://bopid.cn/chat" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">下载 V3</a>
                 </div>
-                <!-- V3 不提供 tfvm / AUR -->
             </div>
         </section>
 
         <!-- ===== 工具 ===== -->
         <section>
-            <h2 style="font-size:1.3rem; font-weight:700; color:#fff; margin:24px 0 12px;">🛠️ 工具</h2>
+            <h2 style="font-size:1.3rem; font-weight:700; color:#fff; margin:24px 0 12px;">工具</h2>
 
             <div class="card">
                 <div class="card-title"><span class="highlight">TouchFish FileMove</span></div>
                 <div class="card-meta">
                     <span>Windows</span>
-                    <span class="tag">工具</span>
                 </div>
                 <p class="card-desc">
                     高效安全的文件移动工具，适用于 Windows 系统。
@@ -801,14 +778,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- ===== 说明 ===== -->
-        <div style="background: rgba(255,255,255,0.02); border-radius: var(--radius); padding: 16px 20px; border: 1px solid var(--border-color); margin-top: 8px;">
-            <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                💡 <strong>在线服务</strong>（如 TouchFish Drive、TouchFish Cloud、Online Judge 等）无需下载，可直接在浏览器中访问。
-            </p>
-        </div>
-
     </main>
 
     <!-- ===== 页脚 ===== -->
@@ -839,7 +808,6 @@
             selects.forEach(select => {
                 select.addEventListener('change', function() {
                     const section = this.closest('.tfvm-section');
-                    // 如果是 tfvm 面板内的下拉（v5/v4），更新对应的 code
                     const cmdElement = section.querySelector('.tfvm-tab-panel.active .tfvm-command code');
                     if (cmdElement) {
                         cmdElement.textContent = 'tfvm -S ' + this.value;
@@ -872,7 +840,6 @@
                                 this.textContent = original;
                             }, 2000);
                         }).catch(() => {
-                            // 回退方案
                             const range = document.createRange();
                             range.selectNode(codeEl);
                             window.getSelection().removeAllRanges();
@@ -898,21 +865,17 @@
                 btns.forEach(btn => {
                     btn.addEventListener('click', function() {
                         const targetId = this.getAttribute('data-tab');
-                        // 移除所有按钮 active
                         btns.forEach(b => b.classList.remove('active'));
                         this.classList.add('active');
 
-                        // 隐藏所有面板
                         const panels = section.querySelectorAll('.tfvm-tab-panel');
                         panels.forEach(p => p.classList.remove('active'));
 
-                        // 显示目标面板
                         const targetPanel = document.getElementById(targetId);
                         if (targetPanel) {
                             targetPanel.classList.add('active');
                         }
 
-                        // 当切换到 AUR 面板时，确保命令显示正确（默认 yay）
                         if (targetId === 'aur-v4-panel') {
                             const aurCmd = document.getElementById('aur-cmd');
                             const helper = document.getElementById('aur-helper');
@@ -920,7 +883,6 @@
                                 aurCmd.textContent = helper.value + ' -S touchfish';
                             }
                         }
-                        // 当切换到 tfvm 面板时，更新命令（从下拉框取值）
                         if (targetId === 'tfvm-v4-panel') {
                             const select = section.querySelector('#v4-pkg');
                             const cmdEl = section.querySelector('#v4-cmd');
